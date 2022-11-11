@@ -8,7 +8,7 @@ import com.spring.SpringBasicoCurso01.beans.HelloService;
 import com.spring.SpringBasicoCurso01.beans.HelloServiceImpl;
 
 @Configuration
-@ComponentScan("com.spring.SpringBasicoCurso01.beans")
+// @ComponentScan("com.spring.SpringBasicoCurso01.beans")   
 public class SpringConfiguration {
 
 	
