@@ -11,28 +11,52 @@
 
 
 
- <bean   id="miBean"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" />
+ <bean   id="miBean"  scope="singleton"  class="com.spring.SpringBasicoCurso01.beans.Mensajes" />
  
     
- <bean   id="miBean2"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+ <bean   id="miBean2"    scope="singleton"  class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
      	<constructor-arg value="100" />
         <constructor-arg value="100 Mensaje con constructores." />
  </bean>
    
- <bean   id="miBean3"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+ <bean   id="miBean3"    scope="singleton"  class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
     <property name="numero"   value="200"/>
     <property name="mensaje" value="Mensaje 200 con propiedades"/>
  </bean>
 
- <bean   id="miBean4"   class="com.spring.SpringBasicoCurso01.beans.Mensajes"  p:numero="300"  p:mensaje="Mensaje con p:"/>
+ <bean   id="miBean4"    scope="singleton"  class="com.spring.SpringBasicoCurso01.beans.Mensajes"  p:numero="300"  p:mensaje="Mensaje con p:"/>
   
  <!--    falta bean con el prefijo     P: -->
 
-<bean id="errores1"  class="com.spring.SpringBasicoCurso01.beans.Errores"     p:mensajes-ref="miBean2" />
+<bean id="errores1"    scope="singleton" class="com.spring.SpringBasicoCurso01.beans.Errores"     p:mensajes-ref="miBean2" />
 
-<bean id="errores2"  class="com.spring.SpringBasicoCurso01.beans.Errores"   >
+<bean id="errores2"   scope="singleton"  class="com.spring.SpringBasicoCurso01.beans.Errores"   >
        <property name="mensajes" ref="miBean3"/>
 </bean>
+
+
+
+
+<!-- -  añadiendo    indice a los constructores    -->
+
+<bean   id="miBean200"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+  
+        <constructor-arg value="100 Mensaje co	n constructores."  index="1"/>
+        <constructor-arg value="100" index="0"/>
+           	
+           	
+ </bean>
+	
+
+<!-- -  añadiendo    indice a los constructores    -->
+
+<bean   id="miBean300"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+  
+    <constructor-arg value="125" 			type="java.lang.Integer" />
+    <constructor-arg value="un texto" 		type="java.lang.String" />  	
+           	
+ </bean>
+
 
 
 </beans>

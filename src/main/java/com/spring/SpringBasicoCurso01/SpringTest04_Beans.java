@@ -52,6 +52,13 @@ public class SpringTest04_Beans {
         
         System.out.println( " Bean1   Errores " + e2.getMensajes().getMensaje() );      
         
+        
+        
+        for (String bean_name : ctx.getBeanDefinitionNames()) {
+            System.out.println(":: " + bean_name);
+        }
+        
+        
         ctx.close();
       
         		

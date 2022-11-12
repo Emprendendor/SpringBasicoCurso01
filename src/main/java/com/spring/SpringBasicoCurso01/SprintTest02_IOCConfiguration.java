@@ -15,18 +15,27 @@ public class SprintTest02_IOCConfiguration {
 		
 		
 	 
-	        System.out.println( "Ejecutando el IoC con nuestro Bean HelloService  @Configuration "  );
-	        
+
 	        
 	        AbstractApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-
+	        
 	        
 	        
 	        HelloService   h  = ctx.getBean("saludaService", HelloService.class );
-	        	
+	       
 	        		
 	        h.Saludar();
 	        
+	        for (String bean_name : ctx.getBeanDefinitionNames()) {
+	            System.out.println(":: " + bean_name);
+	        }
+	        
+	        
+	        
+	        
+	        
+	        SpringConfiguration  springConfiguration = (SpringConfiguration)ctx.getBean("springConfiguration");
+	        springConfiguration.Imprimir();
 	        
 	        ctx.close();
 	      

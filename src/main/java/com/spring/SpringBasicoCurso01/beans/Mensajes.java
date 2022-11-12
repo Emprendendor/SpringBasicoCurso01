@@ -9,7 +9,7 @@ public class Mensajes {
 	 public  Mensajes(  ) {
 	 }
 	
-	 public  Mensajes( int i, String m ) {
+	 public  Mensajes( Integer i, String m ) {
 		  
 			this.numero = i;
 			this.mensaje = m;
@@ -29,7 +29,7 @@ public class Mensajes {
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
-	private int numero;
+	private Integer  numero;
 	 private String mensaje;
 	
 	
