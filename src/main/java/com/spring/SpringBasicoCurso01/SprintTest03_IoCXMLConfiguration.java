@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.SpringBasicoCurso01.beans.HelloService;
 
-public class SprintIoC {
+public class SprintTest03_IoCXMLConfiguration {
 
 	
 	
@@ -13,10 +13,10 @@ public class SprintIoC {
 	
     public static void main( String[] args )
     {
-        System.out.println( "Ejecutando el IoC con nuestro Bean HelloService "  );
+        System.out.println( "Ejecutando el IoC con nuestro Bean HelloService  con XML  y  @Configuration "  );
         
         
-        AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("springXMLConfig.xml");
+        AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("springXMLConfigConfiguration.xml");
         
         
         HelloService   h  = ctx.getBean("saludaService", HelloService.class );

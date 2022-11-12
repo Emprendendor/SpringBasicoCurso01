@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+      xmlns:p="http://www.springframework.org/schema/p"
+      xmlns:c="http://www.springframework.org/schema/c"
+
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+ <bean   id="miBean"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" />
+ 
+    
+ <bean   id="miBean2"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+     	<constructor-arg value="100" />
+        <constructor-arg value="100 Mensaje con constructores." />
+ </bean>
+   
+ <bean   id="miBean3"   class="com.spring.SpringBasicoCurso01.beans.Mensajes" > 
+    <property name="numero"   value="200"/>
+    <property name="mensaje" value="Mensaje 200 con propiedades"/>
+ </bean>
+
+ <bean   id="miBean4"   class="com.spring.SpringBasicoCurso01.beans.Mensajes"  p:numero="300"  p:mensaje="Mensaje con p:"/>
+  
+ <!--    falta bean con el prefijo     P: -->
+
+<bean id="errores1"  class="com.spring.SpringBasicoCurso01.beans.Errores"     p:mensajes-ref="miBean2" />
+
+<bean id="errores2"  class="com.spring.SpringBasicoCurso01.beans.Errores"   >
+       <property name="mensajes" ref="miBean3"/>
+</bean>
+
+
+</beans>

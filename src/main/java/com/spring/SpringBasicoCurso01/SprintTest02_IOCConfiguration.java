@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.SpringBasicoCurso01.beans.HelloService;
 
-public class SprintIOCConfiguration {
+public class SprintTest02_IOCConfiguration {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
